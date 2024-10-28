@@ -1,7 +1,5 @@
 from itertools import permutations
 import heapq
-
-
 class Nodo:
     def __init__(self, simbolo, frecuencia):
         self.simbolo = simbolo

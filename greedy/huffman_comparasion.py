@@ -82,9 +82,9 @@ def huffman_greedy(simbolos, frecuencias):
 # ---- Comparación ----
 
 def medir_tiempo(funcion, simbolos, frecuencias):
-    inicio = time.time()
+    inicio = time.perf_counter()
     funcion(simbolos, frecuencias)
-    fin = time.time()
+    fin = time.perf_counter()
     return (fin - inicio) * 1000  # tiempo en milisegundos
 
 # Generación de frecuencias y símbolos de prueba de varias longitudes

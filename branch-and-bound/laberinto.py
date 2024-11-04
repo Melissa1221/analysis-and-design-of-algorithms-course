@@ -6,7 +6,7 @@ def es_valida(pos, laberinto, visitados):
             laberinto[x][y] == 0 and pos not in visitados)
 
 def ramificacion_y_poda(laberinto, inicio, fin):
-    movimientos = [(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+    movimientos = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     cola_prioridad = []
     heapq.heappush(cola_prioridad, (0, inicio, [inicio]))
     visitados = set()
@@ -16,7 +16,7 @@ def ramificacion_y_poda(laberinto, inicio, fin):
     while cola_prioridad:
         distancia, posicion_actual, camino = heapq.heappop(cola_prioridad)
         visitados.add(posicion_actual)
-
+        
         if posicion_actual == fin:
             if distancia < mejor_solucion:
                 mejor_solucion = distancia
